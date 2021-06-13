@@ -74,6 +74,9 @@ function Login() {
     return (
         <div className={styles.signIn}>
             <div className={styles.signInFormContainer}>
+                <h1 className={styles.brand}>
+                    Chorno Lite
+                </h1>
                 <form
                     className={styles.signInForm}
                     onSubmit={createSubmitHandler(validate, onErrorSet, handleSubmit)}
@@ -81,6 +84,7 @@ function Login() {
                     {loading && <PendingMessage />}
                     <NonFieldError error={error?.nonFieldErrors} />
                     <TextInput
+                        className={styles.input}
                         label="Username *"
                         name="username"
                         value={value.username}
@@ -89,6 +93,7 @@ function Login() {
                         disabled={loading}
                     />
                     <PasswordInput
+                        className={styles.input}
                         label="Password *"
                         name="password"
                         value={value.password}
@@ -106,6 +111,7 @@ function Login() {
                             Forgot password?
                         </a>
                         <Button
+                            className={styles.button}
                             variant="primary"
                             type="submit"
                             name={undefined}

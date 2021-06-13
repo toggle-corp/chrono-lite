@@ -1,13 +1,22 @@
 :root {
-    --width-sign-in-form: 360px;
+    --width-sign-in-form: 420px;
 }
 
 .sign-in {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(-45deg, var(--color-primary), var(--color-accent), var(--color-primary));
+    background-size: 400% 400%;
     height: 100vh;
     overflow-y: auto;
+    animation: gradient 5s ease infinite;
+
+    .brand {
+        padding: var(--spacing-medium) 0;
+        color: var(--color-text-on-primary);
+        font-size: var(--font-size-super-large);
+    }
 
     .sign-in-form-container {
         display: flex;
@@ -16,19 +25,39 @@
         width: var(--width-sign-in-form);
 
         .sign-in-form {
+            border-radius: var(--radius-card);
             background-color: var(--color-foreground);
-            padding: var(--spacing-extra-large);
+            padding: calc(var(--spacing-extra-large) - var(--spacing-small));
+
+            .input {
+                padding: var(--spacing-small);
+            }
 
             .action-buttons {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: var(--spacing-medium) 0;
 
                 .forgot-password-link {
+                    margin: var(--spacing-small);
                     font-size: var(--font-size-extra-small);
+                }
+
+                .button {
+                    margin: var(--spacing-small);
                 }
             }
         }
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
