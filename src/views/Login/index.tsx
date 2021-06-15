@@ -75,7 +75,7 @@ function Login() {
         <div className={styles.signIn}>
             <div className={styles.signInFormContainer}>
                 <h1 className={styles.brand}>
-                    Chorno Lite
+                    Chrono Lite
                 </h1>
                 <form
                     className={styles.signInForm}

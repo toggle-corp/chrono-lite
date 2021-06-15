@@ -1,9 +1,36 @@
 .home {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+    flex-direction: column;
     background-color: var(--color-background);
+    padding: calc(var(--spacing-ultra-large) - var(--spacing-medium));
     width: 100vw;
     height: 100vh;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        overflow-y: auto;
+
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            .table {
+                margin: var(--spacing-medium);
+            }
+        }
+
+        .footer {
+            display: flex;
+            flex-shrink: 0;
+            justify-content: flex-end;
+            padding: var(--spacing-medium);
+
+            .pager {
+                flex-shrink: 0;
+            }
+        }
+    }
 }

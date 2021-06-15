@@ -58,6 +58,6 @@ export function mergeBbox(bboxes: GeoJSON.BBox[]) {
 
 export interface MultiResponse<T> {
     limit: number;
-    total: number;
+    count: number;
     results: T[];
 }
