@@ -35,7 +35,7 @@ jobs:
         run: yarn install
 
       - name: Run yarn build (also test)
-        run: env > .env && NODE_OPTIONS=--max_old_space_size=4096 yarn build:unsafe
+        run: env > .env && NODE_OPTIONS=--max_old_space_size=4096 yarn build
         env:
           # TODO:
           REACT_APP_SENTRY_DSN: ${{ secrets.REACT_APP_SENTRY_DSN }}
